@@ -1,0 +1,87 @@
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import ClientBody from "./ClientBody";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://same-kiwt2dug02r-latest.netlify.app'),
+  title: "Ekka - Multi-vendor eCommerce Store",
+  description: "Discover the best collection of fashion, electronics, and accessories at Ekka, your one-stop multi-vendor eCommerce marketplace",
+  keywords: ["ecommerce", "online shopping", "multi-vendor", "fashion", "electronics", "marketplace"],
+  authors: [{ name: "Ekka Team" }],
+  creator: "Ekka",
+  publisher: "Ekka",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://same-kiwt2dug02r-latest.netlify.app",
+    title: "Ekka - Multi-vendor eCommerce Store",
+    description: "Discover the best collection of fashion, electronics, and accessories at Ekka, your one-stop multi-vendor eCommerce marketplace",
+    siteName: "Ekka eCommerce",
+    images: [
+      {
+        url: "https://ext.same-assets.com/3049334603/2369812464.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Ekka eCommerce Storefront",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ekka - Multi-vendor eCommerce Store",
+    description: "Discover the best collection of fashion, electronics, and accessories at Ekka, your one-stop multi-vendor eCommerce marketplace",
+    images: ["https://ext.same-assets.com/3049334603/2369812464.jpeg"],
+    creator: "@ekka",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ClientBody>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ClientBody>
+      </body>
+    </html>
+  );
+}

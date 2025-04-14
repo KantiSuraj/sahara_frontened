@@ -50,7 +50,7 @@ const products: Product[] = [
   },
   {
     id: 4,
-    name: 'Round Neck T-Shirt',
+    name: 'Hat',
     price: 46.00,
     rating: 4.0,
     image: 'https://ext.same-assets.com/3049334603/3474038737.jpeg',
@@ -59,7 +59,7 @@ const products: Product[] = [
   },
   {
     id: 5,
-    name: 'Leather Handbag',
+    name: 'Belt',
     price: 82.00,
     originalPrice: 95.00,
     rating: 4.7,
@@ -69,7 +69,7 @@ const products: Product[] = [
   },
   {
     id: 6,
-    name: 'Blue Denim Jacket',
+    name: 'Smart Watch',
     price: 129.00,
     rating: 4.3,
     image: 'https://ext.same-assets.com/3049334603/2283962858.jpeg',
@@ -77,7 +77,7 @@ const products: Product[] = [
   },
   {
     id: 7,
-    name: 'Stylish Sunglasses',
+    name: 'Blue Denim Jacket',
     price: 39.00,
     rating: 4.6,
     image: 'https://ext.same-assets.com/3049334603/4075499556.jpeg',
@@ -86,7 +86,7 @@ const products: Product[] = [
   },
   {
     id: 8,
-    name: 'Women Watch',
+    name: 'Handbag',
     price: 115.00,
     rating: 4.4,
     image: 'https://ext.same-assets.com/3049334603/988855479.jpeg',

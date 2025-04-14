@@ -153,13 +153,13 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 sm:mt-12 pt-4 sm:pt-6 border-t border-gray-200 text-center text-gray-600">
-          <p className="text-xs sm:text-sm">© {new Date().getFullYear()} Ekka. All Rights Reserved.</p>
+          <p className="text-xs sm:text-sm">© {new Date().getFullYear()} Sahara All Rights Reserved.</p>
           <div className="flex justify-center mt-3 sm:mt-4">
-            <img
-              src="https://ext.same-assets.com/3049334603/1443942107.svg"
+            {/* <img
+              src="https://t4.ftcdn.net/jpg/04/73/84/61/360_F_473846184_0k637f6855ZJqaulKqAmgJTEVGVibR1P.jpg"
               alt="Payment Methods"
-              className="h-4 sm:h-6"
-            />
+              className="h-10 sm:h-10"
+            /> */}
           </div>
         </div>
       </div>

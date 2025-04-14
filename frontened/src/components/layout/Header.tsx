@@ -4,42 +4,18 @@ import { Search, ShoppingCart, Heart, User, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import ThemeToggle from '@/components/themetoggle';
 
 const Header = () => {
   return (
     <header className="border-b sticky top-0 bg-white z-50">
-      {/* Top header with contact info, language selector */}
-      <div className="bg-ekka-secondary py-1.5 hidden sm:block">
-        <div className="container-custom flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
-          <div className="flex items-center space-x-3 sm:space-x-4 mb-1 sm:mb-0">
-            <span className="text-xs sm:text-sm whitespace-nowrap">Free Shipping This Week Order Over - $75</span>
-            <div className="border-l pl-3 sm:pl-4 hidden xs:block">
-              <select className="bg-transparent text-xs sm:text-sm outline-none">
-                <option>USD $</option>
-                <option>EUR €</option>
-              </select>
-            </div>
-            <div className="border-l pl-3 sm:pl-4 hidden xs:block">
-              <select className="bg-transparent text-xs sm:text-sm outline-none">
-                <option>English</option>
-                <option>Français</option>
-              </select>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3 sm:space-x-4">
-            <Link href="/login" className="text-xs sm:text-sm hover:text-ekka-primary transition-colors">Login</Link>
-            <Link href="/register" className="text-xs sm:text-sm hover:text-ekka-primary transition-colors border-l pl-3 sm:pl-4">Register</Link>
-          </div>
-        </div>
-      </div>
-
       {/* Main header with logo, search, and user actions */}
       <div className="py-2 sm:py-4">
         <div className="container-custom flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <span className="text-xl sm:text-2xl font-bold text-ekka-dark flex items-center">
-              <span className="text-ekka-primary">E</span>kka
+              <span className="text-ekka-primary">S</span>ahara
             </span>
           </Link>
 
@@ -85,7 +61,7 @@ const Header = () => {
               </div>
               <span className="sr-only sm:not-sr-only sm:ml-1 text-sm hidden md:inline-block">Cart</span>
             </Link>
-
+            <ThemeToggle />
             {/* Mobile menu */}
             <Sheet>
               <SheetTrigger asChild>
@@ -96,12 +72,16 @@ const Header = () => {
               <SheetContent side="left" className="w-[85%] sm:w-[385px] p-0">
                 <div className="p-4 border-b flex items-center justify-between">
                   <span className="text-xl font-bold text-ekka-dark flex items-center">
-                    <span className="text-ekka-primary">E</span>kka
+                    <span className="text-ekka-primary">S</span>ahara
                   </span>
                   <SheetClose className="h-8 w-8 rounded-full flex items-center justify-center hover:bg-gray-100">
                     <X className="h-4 w-4" />
                     <span className="sr-only">Close</span>
+                    
                   </SheetClose>
+                </div>
+                <div className="mt-6 border-t pt-4 px-4">
+                  <ThemeToggle />
                 </div>
                 <div className="p-4">
                   <div className="mb-6">
@@ -113,7 +93,7 @@ const Header = () => {
                   </div>
 
                   <div className="space-y-1 mb-4">
-                    <h3 className="text-xs uppercase font-medium text-gray-500 tracking-wider mb-2">Navigation</h3>
+                    {/* {*<h3 className="text-xs uppercase font-medium text-gray-500 tracking-wider mb-2">Navigation</h3>*} */}
                     <Link href="/" className="block py-2 hover:text-ekka-primary transition-colors text-sm font-medium">Home</Link>
                     <Link href="/shop" className="block py-2 hover:text-ekka-primary transition-colors text-sm font-medium">Shop</Link>
                     <Link href="/categories" className="block py-2 hover:text-ekka-primary transition-colors text-sm font-medium">Categories</Link>
@@ -121,7 +101,7 @@ const Header = () => {
                   </div>
 
                   <div className="space-y-1 mb-4">
-                    <h3 className="text-xs uppercase font-medium text-gray-500 tracking-wider mb-2">Pages</h3>
+                    {/* <h3 className="text-xs uppercase font-medium text-gray-500 tracking-wider mb-2">Pages</h3> */}
                     <Link href="/about" className="block py-2 hover:text-ekka-primary transition-colors text-sm">About</Link>
                     <Link href="/contact" className="block py-2 hover:text-ekka-primary transition-colors text-sm">Contact</Link>
                     <Link href="/faq" className="block py-2 hover:text-ekka-primary transition-colors text-sm">FAQ</Link>
@@ -132,24 +112,6 @@ const Header = () => {
                     <Link href="/login" className="block py-2 hover:text-ekka-primary transition-colors text-sm">Login</Link>
                     <Link href="/register" className="block py-2 hover:text-ekka-primary transition-colors text-sm">Register</Link>
                     <Link href="/account" className="block py-2 hover:text-ekka-primary transition-colors text-sm">My Account</Link>
-                  </div>
-
-                  {/* Mobile currency and language selectors */}
-                  <div className="mt-6 flex items-center space-x-4 sm:hidden">
-                    <div>
-                      <label className="text-xs text-gray-500 block mb-1">Currency</label>
-                      <select className="bg-transparent text-sm outline-none border px-2 py-1 rounded">
-                        <option>USD $</option>
-                        <option>EUR €</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="text-xs text-gray-500 block mb-1">Language</label>
-                      <select className="bg-transparent text-sm outline-none border px-2 py-1 rounded">
-                        <option>English</option>
-                        <option>Français</option>
-                      </select>
-                    </div>
                   </div>
                 </div>
               </SheetContent>

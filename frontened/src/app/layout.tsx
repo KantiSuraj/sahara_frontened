@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientBody from "./ClientBody";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://same-kiwt2dug02r-latest.netlify.app'),
-  title: "Ekka - Multi-vendor eCommerce Store",
-  description: "Discover the best collection of fashion, electronics, and accessories at Ekka, your one-stop multi-vendor eCommerce marketplace",
+  title: "Sahara - Multi-vendor eCommerce Store",
+  description: "Discover the best collection of fashion, electronics, and accessories at Sahara, your one-stop multi-vendor eCommerce marketplace",
   keywords: ["ecommerce", "online shopping", "multi-vendor", "fashion", "electronics", "marketplace"],
-  authors: [{ name: "Ekka Team" }],
-  creator: "Ekka",
-  publisher: "Ekka",
+  authors: [{ name: "Sahara Team" }],
+  creator: "Sahara",
+  publisher: "Sahara",
   formatDetection: {
     email: false,
     address: false,
@@ -33,26 +34,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_India",
     url: "https://same-kiwt2dug02r-latest.netlify.app",
-    title: "Ekka - Multi-vendor eCommerce Store",
-    description: "Discover the best collection of fashion, electronics, and accessories at Ekka, your one-stop multi-vendor eCommerce marketplace",
-    siteName: "Ekka eCommerce",
+    title: "Sahara - Multi-vendor eCommerce Store",
+    description: "Discover the best collection of fashion, electronics, and accessories at Sahara, your one-stop multi-vendor eCommerce marketplace",
+    siteName: "Sahara eCommerce",
     images: [
       {
         url: "https://ext.same-assets.com/3049334603/2369812464.jpeg",
         width: 1200,
         height: 630,
-        alt: "Ekka eCommerce Storefront",
+        alt: "Sahara eCommerce Storefront",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ekka - Multi-vendor eCommerce Store",
-    description: "Discover the best collection of fashion, electronics, and accessories at Ekka, your one-stop multi-vendor eCommerce marketplace",
+    title: "Sahara - Multi-vendor eCommerce Store",
+    description: "Discover the best collection of fashion, electronics, and accessories at Sahara, your one-stop multi-vendor eCommerce marketplace",
     images: ["https://ext.same-assets.com/3049334603/2369812464.jpeg"],
-    creator: "@ekka",
+    creator: "@Sahara",
   },
   robots: {
     index: true,
@@ -74,6 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <ClientBody>
           <div className="flex flex-col min-h-screen">
             <Header />
@@ -81,6 +83,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ClientBody>
+        </ThemeProvider>
       </body>
     </html>
   );

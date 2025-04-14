@@ -8,7 +8,7 @@ import ThemeToggle from '@/components/themetoggle';
 
 const Header = () => {
   return (
-    <header className="border-b sticky top-0 bg-white z-50">
+    <header className="border-b sticky top-0 bg-background z-50">
       {/* Main header with logo, search, and user actions */}
       <div className="py-2 sm:py-4">
         <div className="container-custom flex items-center justify-between">

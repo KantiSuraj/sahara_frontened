@@ -32,7 +32,7 @@ const categories = [
 
 const CategorySection = () => {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-muted">
       <div className="container-custom">
         <h2 className="section-title">Top Categories</h2>
         <p className="section-subtitle">Discover the most popular categories chosen by our customers</p>

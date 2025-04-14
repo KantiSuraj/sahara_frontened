@@ -106,7 +106,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-10 xs:py-12 sm:py-16 md:py-20 bg-white">
+    <section className="py-10 xs:py-12 sm:py-16 md:py-20 bg-background">
       <div className="container-custom">
         <h2 className="section-title text-xl xs:text-2xl md:text-3xl">Client Reviews</h2>
         <p className="section-subtitle text-xs sm:text-sm md:text-base">What our customers say about us</p>

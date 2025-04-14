@@ -50,7 +50,7 @@ const instagramPosts: InstagramPost[] = [
 
 const InstagramSection = () => {
   return (
-    <section className="py-10 xs:py-12 sm:py-16 md:py-20 bg-white">
+    <section className="py-10 xs:py-12 sm:py-16 md:py-20 bg-background">
       <div className="container-custom">
         <h2 className="section-title text-xl xs:text-2xl md:text-3xl">Instagram Feed</h2>
         <p className="section-subtitle text-xs sm:text-sm md:text-base">Follow us on Instagram for exclusive content and offers</p>

@@ -145,10 +145,10 @@ const Header = () => {
         </Link>
       </nav>
       <div className="flex space-x-4 mt-2 sm:mt-0">
-        <Link href="/login" className="text-sm font-medium px-4 py-2 border rounded hover:bg-primary hover:text-white transition">
-          Log In
+        <Link href="/sign-in" className="text-sm font-medium px-4 py-2 border rounded hover:bg-primary hover:text-white transition">
+          Sign In
         </Link>
-        <Link href="/signup" className="text-sm font-medium px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition">
+        <Link href="/sign-up" className="text-sm font-medium px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition">
           Sign Up
         </Link>
       </div>

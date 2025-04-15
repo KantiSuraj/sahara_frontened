@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 
-// Top categories with their images and counts
 const categories = [
   {
     id: 1,
@@ -32,22 +31,30 @@ const categories = [
 
 const CategorySection = () => {
   return (
-    <section className="section-padding bg-muted">
+    <section className="section-padding bg-muted text-foreground ">
       <div className="container-custom">
         <h2 className="section-title">Top Categories</h2>
-        <p className="section-subtitle">Discover the most popular categories chosen by our customers</p>
+        <p className="section-subtitle text-muted-foreground">
+          Discover the most popular categories chosen by our customers
+        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {categories.map(category => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+          {categories.map((category) => (
             <Link href={`/categories/${category.id}`} key={category.id}>
-              <Card className="overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
-                <CardContent className="p-0 relative">
-                  <div className="bg-blue-100 p-6 flex justify-center items-center">
-                    <img src={category.image} alt={category.name} className="w-20 h-20 object-contain" />
+              <Card className="overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1 bg-card text-card-foreground rounded-xl">
+                <CardContent className="p-0">
+                  {/* Top image section, using bg-secondary which adapts to theme */}
+                  <div className="p-6 flex justify-center items-center " >
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="w-20 h-20 object-contain"
+                    />
                   </div>
-                  <div className="p-4 text-center">
+                  {/* Bottom text section */}
+                  <div className="p-4 text-center bg-background">
                     <h3 className="font-semibold text-lg">{category.name}</h3>
-                    <p className="text-gray-500 text-sm">{category.count} Products</p>
+                    <p className="text-muted-foreground text-sm">{category.count} Products</p>
                   </div>
                 </CardContent>
               </Card>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import CategorySection from '@/components/home/CategorySection';
+import CategorySection from '.././components/home/CategorySection';
 
 export default function CategoriesPage() {
   return (

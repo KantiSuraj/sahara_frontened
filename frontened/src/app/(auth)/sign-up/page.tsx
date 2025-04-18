@@ -1,9 +1,9 @@
 
 import { Metadata } from "next"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from '../../(site)/components/ui/button'
+import { Input } from "../../(site)/components/ui/input"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../(site)/components/ui/card"
 
 export const metadata: Metadata = {
   title: "Sign Up | Sahara",
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function SignUpPage() {
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
-      <Card className="w-[350px]">
+    <div className=" flex items-center justify-center">
+      <Card className="w-[350px] ">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl text-center">Create an account</CardTitle>
           <CardDescription className="text-center">

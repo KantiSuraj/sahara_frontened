@@ -1,6 +1,6 @@
 
 import React from 'react';
-import ProductsSection from '@/components/home/ProductsSection';
+import ProductsSection from '../components/home/ProductsSection';
 
 export default function ProductPage() {
   return (

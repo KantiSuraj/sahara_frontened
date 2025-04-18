@@ -1,3 +1,5 @@
+
+const path = require("path");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -39,9 +41,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    turbo: false 
-  }
+  webpack:(config)=> {
+    config.resolve.alias["@"] = path.resolve(__dirname, "src");
+    return config;
+  },
+  // experimental: {
+  //   turbo: false 
+  // }
 };
 
 module.exports = nextConfig;

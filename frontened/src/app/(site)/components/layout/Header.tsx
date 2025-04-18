@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { Search, ShoppingCart, Heart, User, Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import ThemeToggle from '@/components/themetoggle';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '../ui/sheet';
+import ThemeToggle from '../themetoggle';
 
 const Header = () => {
   return (
@@ -70,26 +70,23 @@ const Header = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[85%] sm:w-[385px] p-0">
-                <div className="p-4 border-b flex items-center justify-between">
-                  <span className="text-xl font-bold text-dark flex items-center">
+                <div className="p-4  border-b flex items-center justify-between">
+                  <div className="text-xl font-bold text-dark flex items-center p-4 ">
                     <span className="text-primary">S</span>ahara
-                  </span>
-                  <SheetClose className="h-8 w-8 rounded-full flex items-center justify-center hover:bg-gray-100">
-                    <X className="h-4 w-4" />
-                    <span className="sr-only">Close</span>
-
-                  </SheetClose>
+                  </div>
+                  
                 </div>
-                <div className="mt-6 border-t pt-4 px-4">
-                  <ThemeToggle />
-                </div>
+      
                 <div className="p-4">
-                  <div className="mb-6">
+                  <div className="mb-6 mt-4 flex items-center">
                     <Input
                       type="search"
                       placeholder="Search products..."
                       className="w-full pr-10 text-sm"
                     />
+                    <div className="mt-3 pl-4 pb-3 flex justify-end items-center">
+                  <ThemeToggle />
+                </div>
                   </div>
 
                   <div className="space-y-1 mb-4">
@@ -97,21 +94,13 @@ const Header = () => {
                     <Link href="/" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Home</Link>
                     <Link href="/shop" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Shop</Link>
                     <Link href="/categories" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Categories</Link>
-                    <Link href="/products" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Products</Link>
-                  </div>
-
-                  <div className="space-y-1 mb-4">
-                    {/* <h3 className="text-xs uppercase font-medium text-gray-500 tracking-wider mb-2">Pages</h3> */}
-                    <Link href="/about" className="block py-2 hover:text-primary transition-colors text-sm">About</Link>
-                    <Link href="/contact" className="block py-2 hover:text-primary transition-colors text-sm">Contact</Link>
-                    <Link href="/faq" className="block py-2 hover:text-primary transition-colors text-sm">FAQ</Link>
-                  </div>
-
-                  <div className="space-y-1">
-                    <h3 className="text-xs uppercase font-medium text-gray-500 tracking-wider mb-2">Account</h3>
-                    <Link href="/login" className="block py-2 hover:text-primary transition-colors text-sm">Login</Link>
-                    <Link href="/register" className="block py-2 hover:text-primary transition-colors text-sm">Register</Link>
-                    <Link href="/account" className="block py-2 hover:text-primary transition-colors text-sm">My Account</Link>
+                    <Link href="/product" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Products</Link>
+                    <Link href="/about" className="block py-2 hover:text-primary transition-colors text-sm font-medium">About</Link>
+                    <Link href="/contact" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Contact</Link>
+                    <Link href="/faq" className="block py-2 hover:text-primary transition-colors text-sm font-medium">FAQ</Link>
+                    <Link href="/sign-in" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Login</Link>
+                    <Link href="/sign-up" className="block py-2 hover:text-primary transition-colors text-sm font-medium">Register</Link>
+                    <Link href="/account" className="block py-2 hover:text-primary transition-colors text-sm font-medium">My Account</Link>
                   </div>
                 </div>
               </SheetContent>

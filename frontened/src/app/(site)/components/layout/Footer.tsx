@@ -1,20 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 pt-10 xs:pt-12 sm:pt-16 pb-6">
+    <footer className="bg-gray-100 dark:bg-[hsl(222,47%,11%)] text-gray-600 dark:text-gray-300 pt-10 xs:pt-12 sm:pt-16 pb-6 transition-colors">
       <div className="container-custom">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Information */}
           <div>
-            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Information</h3>
+            <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-gray-800 dark:text-white">Information</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               <li>
-                <Link href="/about" className="text-xs sm:text-sm text-gray-600 hover:text-ekka-primary transition-colors">
+                <Link href="/about" className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-ekka-primary dark:hover:text-ekka-primary-light transition-colors">
                   About Us
                 </Link>
               </li>
@@ -108,18 +108,19 @@ const Footer = () => {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="rounded-r-none xs:w-auto text-xs sm:text-sm focus-visible:ring-ekka-primary mb-2 xs:mb-0"
+                className="rounded-r-none xs:w-auto text-xs sm:text-sm focus-visible:ring-ekka-primary mb-2 xs:mb-0 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
               />
-              <Button className="rounded-l-none xs:rounded-l-none bg-ekka-primary hover:bg-ekka-primary/90 text-xs sm:text-sm py-1.5 h-auto">
+              <Button className="rounded-l-none xs:rounded-l-none bg-ekka-primary hover:bg-ekka-primary/90 text-xs sm:text-sm py-1.5 h-auto dark:bg-ekka-primary-dark dark:hover:bg-ekka-primary">
                 Subscribe
               </Button>
+
             </div>
             <div className="flex items-center space-x-2 xs:space-x-3 mt-4 sm:mt-6">
               <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary transition-colors"
+                className="bg-white dark:bg-gray-800 p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary dark:hover:text-ekka-primary transition-colors"
               >
                 <Facebook className="h-4 w-4 xs:h-5 xs:w-5" />
               </Link>
@@ -127,7 +128,7 @@ const Footer = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary transition-colors"
+                className="bg-white dark:bg-gray-800 p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary dark:hover:text-ekka-primary transition-colors"
               >
                 <Twitter className="h-4 w-4 xs:h-5 xs:w-5" />
               </Link>
@@ -135,7 +136,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary transition-colors"
+                className="bg-white dark:bg-gray-800 p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary dark:hover:text-ekka-primary transition-colors"
               >
                 <Instagram className="h-4 w-4 xs:h-5 xs:w-5" />
               </Link>
@@ -143,7 +144,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary transition-colors"
+                className="bg-white dark:bg-gray-800 p-1.5 xs:p-2 rounded-full shadow-sm hover:text-ekka-primary dark:hover:text-ekka-primary transition-colors"
               >
                 <Linkedin className="h-4 w-4 xs:h-5 xs:w-5" />
               </Link>
@@ -152,7 +153,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 sm:mt-12 pt-4 sm:pt-6 border-t border-gray-200 text-center text-gray-600">
+        <div className="mt-8 sm:mt-12 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700 text-center text-gray-600 dark:text-gray-400">
           <p className="text-xs sm:text-sm">© {new Date().getFullYear()} Sahara All Rights Reserved.</p>
           <div className="flex justify-center mt-3 sm:mt-4">
             {/* <img
